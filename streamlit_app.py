@@ -18,6 +18,10 @@ pages = {
             'application_pages/equipment_failure_probability_assessment.py',
             title='4. Avaliação da Probabilidade de Falha de Equipamentos',
         ),
+        st.Page(
+            'application_pages/data_normality_analysis.py',
+            title='5. Teste de normalidade',
+        ),
     ],
 }
 
