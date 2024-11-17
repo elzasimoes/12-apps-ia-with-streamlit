@@ -1,6 +1,8 @@
 """This code snippet creates and fits a linear regression model using the
 LinearRegression class from the sklearn library.
-It uses the input features X and the target variable y to train the model."""
+It uses the input features X and the target variable y to train the model.
+https://www.notion.so/elzasimoes/IA-Streamlit-Prevendo-Custos-para-abrir-uma-Franquia-Regress-o-1411bb8db8cb809da5a1ee80e1317b6b?pvs=4
+"""
 
 import matplotlib.pyplot as plt
 import pandas as pd
