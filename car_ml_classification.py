@@ -11,8 +11,10 @@ st.set_page_config(layout='wide', page_title='Classificação de Veículos')
 @st.cache_data
 def load_data_and_model():
     """
-    Loads vehicle classification data, encodes categorical features, splits the data into training and testing sets,
-    trains a Categorical Naive Bayes model, and returns the encoder, trained model, and accuracy score.
+    Loads vehicle classification data, encodes categorical features,
+    splits the data into training and testing sets,
+    trains a Categorical Naive Bayes model, and returns the encoder,
+    trained model, and accuracy score.
 
     Returns:
         encoder (OrdinalEncoder): The encoder used for transforming categorical features.
@@ -56,3 +58,23 @@ encoder, model, accuracy, cars = load_data_and_model()
 
 st.title('Previsão de qualidade de veículo')
 st.write(f'Acuracia do modelo: {accuracy:.2f}')
+
+input_features = [
+    st.selectbox('Preço:', cars['buying'].unique()),
+    st.selectbox('Manutenção:', cars['maint'].unique()),
+    st.selectbox('Portas:', cars['doors'].unique()),
+    st.selectbox('Capacidade de Passageiros:', cars['persons'].unique()),
+    st.selectbox('Porta Malas:', cars['lug_boot'].unique()),
+    st.selectbox('Segurança:', cars['safety'].unique()),
+]
+
+class_mapping = {'unacc': 'Inaceitável', 'acc': 'Aceitável', 'good': 'Bom', 'vgood': 'Muito bom'}
+
+processing = st.button('Processar')
+
+if processing is True:
+    input_df = pd.DataFrame([input_features], columns=cars.columns.drop('class'))
+    inputt_encoded = encoder.transform(input_df)
+    predict_encoded = model.predict(inputt_encoded)
+    final_prev = cars['class'].astype('category').cat.categories[predict_encoded][0]
+    st.write(f'A condição do carro é {class_mapping.get(final_prev)}')
