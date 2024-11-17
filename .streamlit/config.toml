@@ -1,5 +1,3 @@
-# config.toml
-
 [theme]
 base="dark"
 primaryColor="#00bfae"
@@ -17,7 +15,3 @@ borderColor="#444444"
 backgroundColor="#292929"
 textColor="#FFFFFF"
 font="sans serif"
-
-[theme] 
-buttonColor="#00bfae"
-buttonTextColor="#FFFFFF"
