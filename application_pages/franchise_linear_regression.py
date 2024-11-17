@@ -12,7 +12,7 @@ from sklearn.linear_model import LinearRegression
 
 st.title('Previsão inicial de custo para Franquia utilizando regressão Linear')
 
-franchise_data = pd.read_csv('./franchise_linear_regression.csv', sep=';')
+franchise_data = pd.read_csv('data/franchise_linear_regression.csv', sep=';')
 
 X = franchise_data[['FrqAnual']]
 # A DataFrame containing the feature(s) for the linear regression model.

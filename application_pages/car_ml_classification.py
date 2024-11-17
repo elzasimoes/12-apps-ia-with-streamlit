@@ -30,7 +30,7 @@ def load_data_and_model():
 
     # The function reads a CSV file named
     # 'car_ml_classification.csv' into a DataFrame.
-    cars = pd.read_csv('car_ml_classification.csv', sep=',')
+    cars = pd.read_csv('data/car_ml_classification.csv', sep=',')
     # An OrdinalEncoder is instantiated.
     encoder = OrdinalEncoder()
 
