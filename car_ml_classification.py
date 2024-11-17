@@ -1,3 +1,8 @@
+"""Classification: Develop a system to evaluate and predict
+the quality of vehicles based on historical characteristics,
+using classification algorithms.
+https://www.notion.so/elzasimoes/IA-Streamlit-Previs-o-da-Qualidade-de-Ve-culos-1411bb8db8cb8097a1aae9c8389bf014?pvs=4
+"""
 import pandas as pd
 import streamlit as st
 from sklearn.metrics import accuracy_score
