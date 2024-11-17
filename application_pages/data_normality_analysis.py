@@ -2,7 +2,9 @@
 Normal distribution: explore statistical techniques to verify the normality of the data sets,
 essential in many statistical analyzes and inferences.
 This code sets up a Streamlit application to test the normality of a dataset using statistical techniques.
-It allows users to upload a CSV file, then generates a histogram and a QQ plot of the data. It also performs a Shapiro-Wilk test to determine if the data follows a normal distribution.
+It allows users to upload a CSV file, then generates a histogram and a QQ plot of the data.
+It also performs a Shapiro-Wilk test to determine
+if the data follows a normal distribution.
 """
 
 import matplotlib.pyplot as plt

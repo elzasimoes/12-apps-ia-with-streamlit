@@ -22,6 +22,10 @@ pages = {
             'application_pages/data_normality_analysis.py',
             title='5. Teste de normalidade',
         ),
+        st.Page(
+            'application_pages/analysis_of_public_accountability_data.py',
+            title='6. Análise de Dados Públicos de Prestação de Contas',
+        ),
     ],
 }
 
