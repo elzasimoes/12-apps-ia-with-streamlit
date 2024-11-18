@@ -1,7 +1,7 @@
 import streamlit as st
 
 pages = {
-    '12 Aplicações Web de Inteligência Artificial': [
+    'Aplicações de Inteligência Artificial': [
         st.Page(
             'application_pages/franchise_linear_regression.py',
             title='1. Prevendo Custos para Abrir Franquia (Regressão)',
@@ -33,6 +33,18 @@ pages = {
         st.Page(
             'application_pages/analysis_of_public_accountability_data.py',
             title='8. Análise de Dados Públicos de Prestação de Conta',
+        ),
+        st.Page(
+            'application_pages/optimize_cargo_transportation.py',
+            title='9. Otimização do Lucro no Transporte de Carga',
+        ),
+        st.Page(
+            'application_pages/genai.py',
+            title='10. Produção de Imagens para Marketing',
+        ),
+        st.Page(
+            'application_pages/finance.py',
+            title='11. Análise de Dados da Bolsa de Valores',
         ),
     ],
 }
