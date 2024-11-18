@@ -23,8 +23,12 @@ pages = {
             title='5. Teste de normalidade',
         ),
         st.Page(
+            'application_pages/retail_recommendation_system.py',
+            title='6 Sistema de Recomendação para Varejo',
+        ),
+        st.Page(
             'application_pages/analysis_of_public_accountability_data.py',
-            title='6. Análise de Dados Públicos de Prestação de Contas',
+            title='8. Análise de Dados Públicos de Prestação de Contas',
         ),
     ],
 }
