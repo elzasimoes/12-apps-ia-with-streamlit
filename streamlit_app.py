@@ -30,6 +30,10 @@ pages = {
             'application_pages/benchmarking_temporal_series.py',
             title='7. Benchmarking de Séries Temporais',
         ),
+        st.Page(
+            'application_pages/analysis_of_public_accountability_data.py',
+            title='8. Análise de Dados Públicos de Prestação de Conta',
+        ),
     ],
 }
 
