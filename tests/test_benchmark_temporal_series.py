@@ -13,6 +13,13 @@ def test_plot_actual_and_forecasted_data():
 
     assert plot is not None
     assert isinstance(plot, plt.__class__)
+    assert plt.gca().get_title() == 'Benchmark de Séries Temporais'
+    legend_labels = [label.get_text() for label in plt.gca().get_legend().get_texts()]
+    assert 'Dados Atuais' in legend_labels[0]
+    assert 'Forecast 1' in legend_labels[1]
+    assert 'Forecast 2' in legend_labels[2]
+    assert plt.gca().get_xgridlines() != []
+    assert plt.gca().get_ygridlines() != []
 
 
 # Handling empty actual data without errors
