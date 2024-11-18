@@ -27,8 +27,8 @@ pages = {
             title='6 Sistema de Recomendação para Varejo',
         ),
         st.Page(
-            'application_pages/analysis_of_public_accountability_data.py',
-            title='8. Análise de Dados Públicos de Prestação de Contas',
+            'application_pages/benchmarking_temporal_series.py',
+            title='7. Benchmarking de Séries Temporais',
         ),
     ],
 }
