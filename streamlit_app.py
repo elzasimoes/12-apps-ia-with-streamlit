@@ -1,7 +1,23 @@
+from datetime import datetime, timedelta
+
 import streamlit as st
+from streamlit_cookies_controller import CookieController
+
+cookie_expires = datetime.now() + timedelta(days=30)
+controller = CookieController()
+
+user_id = controller.get('user_id')
+
+if user_id is None:
+    try:
+        param = st.query_params['user']
+        controller.set('user_id', param, expires=cookie_expires)
+        st.success('User authenticated')
+    except IndexError:
+        st.error('Auth error')
 
 pages = {
-    'Aplicações de Inteligência Artificial': [
+    f'Aplicações de Inteligência Artificial - {user_id}': [
         st.Page(
             'application_pages/franchise_linear_regression.py',
             title='1. Prevendo Custos para Abrir Franquia (Regressão)',
