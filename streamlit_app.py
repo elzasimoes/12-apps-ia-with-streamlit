@@ -1,4 +1,5 @@
 from datetime import datetime, timedelta
+from time import sleep
 
 import streamlit as st
 from streamlit_cookies_controller import CookieController
@@ -6,6 +7,7 @@ from streamlit_cookies_controller import CookieController
 cookie_expires = datetime.now() + timedelta(days=30)
 controller = CookieController()
 
+sleep(2)
 user_id = controller.get('user_id')
 
 if user_id is None:
